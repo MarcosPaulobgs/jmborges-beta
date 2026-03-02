@@ -1,0 +1,88 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-br"> <!-- Início do documento HTML com idioma definido para português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo em dispositivos móveis -->
+    <!-- Importa a fonte "Poppins" do Google Fonts com diferentes pesos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <title>JM Borges Presentes</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo de estilos CSS externo -->
+</head>
+<body>
+
+    
+
+    <header> <!-- Início do cabeçalho do site, geralmente contém logo e menu de navegação -->
+    
+    <!-- Container do logo e título, fica à esquerda -->
+    <div class="logo-area">
+        <img src="img/logo.png" alt="JM Borges Presentes" class="logo"> <!-- Logo da empresa, puxando o arquivo logo.png da pasta img -->
+        <h1>JM Borges Presentes</h1> <!-- Título do site, colocado ao lado do logo -->
+    </div>
+
+    <!-- Menu de navegação principal, ficará à direita -->
+    <nav>
+        <a href="#inicio">Início</a> <!-- Link que leva à seção inicial da página -->
+        <a href="#produtos">Produtos</a> <!-- Link que leva à seção de produtos -->
+        <a href="#sobre">Sobre</a> <!-- Link que leva à seção "Sobre Nós" -->
+        <a href="#contato">Contato</a> <!-- Link que leva à seção de contato -->
+    </nav>
+</header> <!-- Fim do cabeçalho -->
+
+
+
+    <section id="inicio" class="hero"> <!-- Seção de destaque inicial (hero) -->
+        <h2>O presente perfeito para cada momento 🎁</h2> <!-- Subtítulo da seção hero -->
+        <p>Surpreenda quem você ama com algo especial.</p> <!-- Texto descritivo da seção -->
+        <a href="#produtos" class="btn">Ver Produtos</a> <!-- Botão que direciona para a seção de produtos -->
+    </section>
+
+    <section id="produtos" class="produtos"> <!-- Seção que lista os produtos -->
+        <h2>Nossos Destaques</h2> <!-- Título da seção de produtos -->
+
+        <div class="grid"> <!-- Container em grid para organizar os cards de produtos -->
+            <div class="card"> <!-- Card individual de produto -->
+                <img src="https://via.placeholder.com/300" alt="Produto 1"> <!-- Imagem do produto -->
+                <h3>Cesta Personalizada</h3> <!-- Nome do produto -->
+                <p>Ideal para aniversários e datas especiais.</p> <!-- Descrição do produto -->
+                <button onclick="comprar()">Comprar</button> <!-- Botão de ação para comprar, chama a função comprar() do JS -->
+            </div>
+
+            <div class="card"> <!-- Segundo card de produto -->
+                <img src="https://via.placeholder.com/300" alt="Produto 2"> <!-- Imagem do produto -->
+                <h3>Kit Romântico</h3> <!-- Nome do produto -->
+                <p>Surpreenda com amor e carinho.</p> <!-- Descrição do produto -->
+                <button onclick="comprar()">Comprar</button> <!-- Botão de ação -->
+            </div>
+
+            <div class="card"> <!-- Terceiro card de produto -->
+                <img src="https://via.placeholder.com/300" alt="Produto 3"> <!-- Imagem do produto -->
+                <h3>Pelúcias</h3> <!-- Nome do produto -->
+                <p>Fofura que encanta qualquer idade.</p> <!-- Descrição do produto -->
+                <button onclick="comprar()">Comprar</button> <!-- Botão de ação -->
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre"> <!-- Seção "Sobre Nós" -->
+        <h2>Sobre Nós</h2> <!-- Título da seção -->
+        <p>
+            Somos apaixonados por transformar momentos em lembranças inesquecíveis.
+            Trabalhamos com presentes personalizados, kits especiais e muito mais.
+        </p> <!-- Texto explicativo sobre a empresa -->
+    </section>
+
+    <section id="contato" class="contato"> <!-- Seção de contato -->
+        <h2>Fale Conosco</h2> <!-- Título da seção -->
+        <p>Faça seu pedido pelo WhatsApp ou acompanhe nosso Instagram.</p> <!-- Texto informativo -->
+        <a href="#" class="btn whatsapp">WhatsApp</a> <!-- Botão para WhatsApp (link deve ser atualizado) -->
+        <a href="https://www.instagram.com/jmborgespresentes/" target="_blank" class="btn instagram">Instagram</a> <!-- Botão para Instagram, abre em nova aba -->
+    </section>
+
+    <footer> <!-- Rodapé da página -->
+        <p>© 2026 JM Borges Presentes - Todos os direitos reservados</p> <!-- Informações de copyright -->
+    </footer>
+
+    <script src="script.js"></script> <!-- Importa o arquivo JavaScript externo -->
+</body>
+</html>
