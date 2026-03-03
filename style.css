@@ -22,16 +22,14 @@ body {
 /* HEADER MODERNO */
 /* ======================= */
 header {
-    display: flex; /* Alinha itens horizontalmente */
-    justify-content: space-between; /* Espaço entre logo e menu */
-    align-items: center; /* Centraliza verticalmente */
-     background: linear-gradient(135deg, #111, #000); /* Gradiente laranja */
-    color: white; /* Texto branco */
-    padding: 20px 40px; /* Espaçamento interno */
-    position: sticky; /* Fica fixo no topo */
-    top: 0;
-    z-index: 1000; /* Fica acima de outros elementos */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Sombra sutil */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #111, #000); /* cor da barra */
+    color: white;
+    padding: 20px 40px;
+    /* REMOVA estas linhas: position: sticky; top: 0; z-index: 1000; */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* sombra sutil continua */
 }
 
 /* Título no header */
