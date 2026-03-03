@@ -1,74 +1,65 @@
-/* ======================= */
-/* RESET GERAL */
-/* ======================= */
-/* Remove margens e paddings padrões e ajusta box-sizing */
+/* ======================= RESET GERAL ======================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ======================= */
-/* ESTILOS DO BODY */
-/* ======================= */
+/* ======================= BODY ======================= */
 body {
-    font-family: 'Poppins', sans-serif; /* Fonte moderna e legível */
-    background: #f9f9fb; /* Cor de fundo neutra */
-    color: #333; /* Cor do texto */
-    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    display: flex;          /* Flex para empilhar header, main e footer */
+    flex-direction: column; /* Vertical */
+    min-height: 100vh;      /* Ocupa altura total da tela */
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9fb;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* ======================= */
-/* HEADER MODERNO */
-/* ======================= */
+/* ======================= MAIN ======================= */
+main {
+    flex: 1; /* Faz o conteúdo principal ocupar espaço restante, empurrando footer para baixo */
+}
+
+/* ======================= HEADER ======================= */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #111, #000); /* cor da barra */
+    background: linear-gradient(135deg, #111, #000);
     color: white;
     padding: 20px 40px;
-    /* REMOVA estas linhas: position: sticky; top: 0; z-index: 1000; */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* sombra sutil continua */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    /* header rola junto com a página, não fixo */
 }
 
-/* Título no header */
+/* Logo e título */
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 50px;
+    width: auto;
+}
 header h1 {
     font-size: 26px;
-    letter-spacing: 1px; /* Espaçamento entre letras */
+    letter-spacing: 1px;
     margin-left: 10px;
 }
 
-/* ======================= */
-/* LOGO AREA */
-/* ======================= */
-.logo-area {
-    display: flex; /* Alinha logo e título horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-}
-
-.logo {
-    height: 50px; /* Altura da logo */
-    width: auto; /* Mantém proporção da imagem */
-}
-
-/* ======================= */
-/* NAVEGAÇÃO */
-/* ======================= */
+/* ======================= NAVEGAÇÃO ======================= */
 nav {
-    margin-top: 0; /* Remove margem extra */
+    display: flex;
 }
-
 nav a {
-    margin: 0 15px; /* Espaçamento entre links */
-    color: white; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-    font-weight: 500; /* Negrito médio */
-    position: relative; /* Para animação do underline */
-    transition: 0.3s; /* Transição suave */
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
 }
-
-/* Linha animada abaixo do link ao passar mouse */
 nav a::after {
     content: "";
     width: 0%;
@@ -79,157 +70,121 @@ nav a::after {
     bottom: -5px;
     transition: 0.3s;
 }
-
 nav a:hover::after {
-    width: 100%; /* Expande a linha ao passar mouse */
+    width: 100%;
 }
 
-/* ======================= */
-/* HERO SECTION */
-/* ======================= */
+/* ======================= HERO ======================= */
 .hero {
-    text-align: center; /* Centraliza texto */
-    padding: 100px 20px; /* Espaçamento interno grande */
-    background: linear-gradient(135deg, #ff7f00, #ff4500); /* Gradiente laranja */
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #ff7f00, #ff4500);
     color: white;
 }
-
 .hero h2 {
     font-size: 36px;
-    font-weight: 600; /* Negrito */
+    font-weight: 600;
     margin-bottom: 15px;
 }
-
 .hero p {
     font-size: 18px;
-    opacity: 0.9; /* Texto levemente transparente */
+    opacity: 0.9;
 }
 
-/* ======================= */
-/* BOTÃO ELEGANTE */
-/* ======================= */
+/* ======================= BOTÕES ======================= */
 .btn {
     display: inline-block;
     margin-top: 30px;
-    padding: 14px 35px; /* Espaçamento interno do botão */
+    padding: 14px 35px;
     background: white;
-    color: #ff4500; /* Cor do texto laranja */
+    color: #ff4500;
     text-decoration: none;
-    border-radius: 50px; /* Bordas arredondadas */
+    border-radius: 50px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Sombra do botão */
-    transition: all 0.3s ease; /* Animação suave */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
 }
-
 .btn:hover {
-    transform: translateY(-3px); /* Leve elevação ao passar mouse */
+    transform: translateY(-3px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-/* ======================= */
-/* PRODUTOS */
-/* ======================= */
+/* ======================= PRODUTOS ======================= */
 .produtos {
     padding: 80px 20px;
     text-align: center;
 }
-
 .produtos h2 {
     font-size: 30px;
     margin-bottom: 10px;
 }
-
-/* GRID DE PRODUTOS */
 .grid {
-    display: grid; /* Layout em grid */
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Responsivo */
-    gap: 30px; /* Espaço entre cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
     margin-top: 50px;
 }
-
-/* ======================= */
-/* CARD DE PRODUTO PROFISSIONAL */
-/* ======================= */
 .card {
     background: white;
     border-radius: 20px;
-    overflow: hidden; /* Esconde excesso de imagem */
+    overflow: hidden;
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
     transition: all 0.4s ease;
 }
-
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
-
 .card img {
     width: 100%;
     height: 260px;
-    object-fit: cover; /* Mantém proporção da imagem */
+    object-fit: cover;
 }
-
-.card-content {
-    padding: 20px;
-}
-
 .card h3 {
     margin-bottom: 10px;
     font-size: 20px;
 }
-
 .card p {
     font-size: 14px;
-    opacity: 0.7; /* Texto mais suave */
+    opacity: 0.7;
 }
-
-/* BOTÃO DENTRO DO CARD */
 .card button {
     margin-top: 15px;
     padding: 10px 20px;
     border: none;
-    background: linear-gradient(135deg, #ff7f00, #ff4500); /* Gradiente laranja */
+    background: linear-gradient(135deg, #ff7f00, #ff4500);
     color: white;
     border-radius: 30px;
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s;
 }
-
 .card button:hover {
-    opacity: 0.9; /* Efeito hover simples */
+    opacity: 0.9;
 }
 
-/* ======================= */
-/* SOBRE E CONTATO */
-/* ======================= */
+/* ======================= SOBRE E CONTATO ======================= */
 .sobre, .contato {
     padding: 80px 20px;
     text-align: center;
     background: #ffffff;
 }
-
 .sobre h2, .contato h2 {
     font-size: 28px;
     margin-bottom: 20px;
 }
-
-/* BOTÕES SOCIAIS */
 .whatsapp {
     background: #25d366;
     color: white;
 }
-
 .instagram {
     background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
     color: white;
     margin-left: 15px;
 }
 
-/* ======================= */
-/* FOOTER */
-/* ======================= */
+/* ======================= FOOTER ======================= */
 footer {
     background: #111;
     color: #bbb;
@@ -238,21 +193,40 @@ footer {
     font-size: 14px;
 }
 
-/* ======================= */
-/* RESPONSIVO PARA TELAS PEQUENAS */
-/* ======================= */
+/* ======================= RESPONSIVO ======================= */
 @media (max-width: 768px) {
-    .hero h2 {
-        font-size: 26px; /* Reduz tamanho do título */
-    }
 
-    nav a {
-        display: block; /* Links empilhados */
-        margin: 8px 0;
-    }
+    /* HERO */
+    .hero h2 { font-size: 26px; }
 
-    .card img {
-        height: 200px; /* Ajusta altura da imagem */
-    }
-}   
+    /* CARD */
+    .card img { height: 200px; }
 
+    /* NAVEGAÇÃO - MENU MOBILE */
+    nav {
+        display: none; /* esconde inicialmente */
+        flex-direction: column;
+        gap: 10px;
+        background: #111;
+        padding: 10px 20px;
+        border-radius: 10px;
+        position: absolute;
+        top: 70px;  /* abaixo do header */
+        right: 20px;
+    }
+    nav.active { display: flex; } /* abre menu ao clicar */
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+    }
+}
